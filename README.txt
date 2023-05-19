@@ -1,5 +1,5 @@
      Dev build
-npm init ---> test commamd test(got package.json)
+npm init ---> test commamd jest(got package.json)
 Parcel-> webpack >Vite  > Bundler imp(package/dependency)
 npm install -D parcel(got package-lock.json and node_modules)
 npx parcel index.html(excute package) -->(got dist folder and parcel-cache folder)
