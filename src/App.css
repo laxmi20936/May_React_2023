@@ -1,0 +1,61 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    border:1px solid black;
+    align-items: center;
+    margin-bottom:15px;
+}
+
+.nav-items{
+    display:flex;
+    list-style-type: none;
+    margin-left:-1rem;
+}
+
+.nav-items li{
+    padding:15px;
+    font-size: 18px;
+    margin-right:20px;
+}
+
+.img{
+    width:150px;
+}
+.body{
+    /* background-color: lightgray; */
+}
+.search-container{
+    margin-bottom:10px;
+}
+.res-card{
+    padding:5px;
+    width:190px;
+    border:1px solid black;
+    margin:5px
+}
+/* .cui{
+    width:80%;
+} */
+.cuisines{
+    /* word-wrap:break-word; */
+    overflow-wrap: break-word;
+}
+
+.res-card:hover{
+    background-color: lightgray;
+}
+
+.res-card-data{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.res-image{
+    width:100%;
+}
+
+.allRestaurant{
+    display: flex;
+    flex-wrap: wrap;
+}
