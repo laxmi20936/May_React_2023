@@ -22,3 +22,17 @@ npm parcel build index.html.  We can ignore )
 
 
 
+-------------------------------------------------------------------------
+// ---------------Layout--------------------------------------------
+// Header 
+//    -logo
+//    -NavItems
+// Body
+//     -Search
+//     -Restaurant Container
+//         -Restaurant Cards --Image, name, rating, cuisines
+// Footer
+// -----------------------------------------------------------------
+
+
+

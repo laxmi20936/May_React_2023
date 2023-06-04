@@ -1,18 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-
-// ---------------Layout--------------------------------------------
-// Header 
-//    -logo
-//    -NavItems
-// Body
-//     -Search
-//     -Restaurant Container
-//         -Restaurant Cards --Image, name, rating, cuisines
-// Footer
-// -----------------------------------------------------------------
-
 const cards = [
     {
       "type": "restaurant",
@@ -1795,85 +1780,6 @@ const cards = [
       },
       "subtype": "basic"
     }
-  ]
+]
 
-const Header =()=>{
-    return(
-        <div className="header">
-            <div className="img-container">
-                <img  className="img" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" alt="no-img"/>
-            </div>
-            <div className="nav-container">
-                <ul className="nav-items">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Login</li>
-                    <li>Card</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const RestaurantCard =(props)=>{
-    console.log(props)
-    let {resData} = props;
-    console.log(resData.data)
-    const {name, avgRating,costForTwo,cloudinaryImageId,cuisines,deliveryTime }= resData.data;
-    console.log(name, avgRating,costForTwo,cloudinaryImageId,cuisines,deliveryTime);
-    console.log(cuisines);
-    console.log(cuisines.join(","));
-
-    return(
-        <div className="res-card">
-            {console.log("AA")}
-            <div className="res-img-cont">
-                <img className="res-image" src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} alt="no-img-found"></img>
-            </div>
-            <div className="res-card-data">
-                <h3>{name}</h3>
-                <div className="cui">
-                    <p className="cuisines">{cuisines.join(",")}</p>
-                </div>
-                
-                <p>{avgRating}stars</p>
-                <p>{deliveryTime} minutes</p>
-                <p>Rs {costForTwo/100} FOR TWO</p>
-
-            </div>
-        </div>
-    )
-}
-
-const Body = () => {
-    return(
-        <div className="body">
-            <div className="search-container">
-                <input type="text"/>
-                <button>Search</button>
-            </div>
-            <div className="allRestaurant">
-                {/* <RestaurantCard resData={resObj}/> */}
-                {
-                    cards.map((dataObj)=> <RestaurantCard key={dataObj.data.id} resData={dataObj}/>)
-                }
-                
-
-            </div>
-        </div>
-    )
-}
-
-
-
-const AppLayout = () =>{
-    return(
-        <>
-            <Header/>
-            <Body/>
-        </>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
+export default cards;
