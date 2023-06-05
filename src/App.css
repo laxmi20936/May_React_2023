@@ -21,9 +21,7 @@
 .img{
     width:150px;
 }
-.body{
-    /* background-color: lightgray; */
-}
+
 .search-container{
     margin-bottom:10px;
 }
@@ -58,4 +56,18 @@
 .allRestaurant{
     display: flex;
     flex-wrap: wrap;
+}
+
+.shimmer-parent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer{
+    margin:10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    background-color: lightgrey;
+    height:150px;
+    width:200px;
 }

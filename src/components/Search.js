@@ -1,17 +1,18 @@
 import { useState } from "react";
 // import cards from "../utils/mockData";
 
-const searchFilter = (search, mockData) => {
-    const dataOfArr= mockData.filter(x => x.data.name.includes(search))
+const searchFilter = (search, allRes) => {
+    const dataOfArr= allRes.filter(x => x.data.name.toLowerCase().includes(search.toLowerCase()))
     return dataOfArr;
 }
-const Search = ({mockData, setMockData}) => {
+const Search = ({allRes, setMockData}) => {
+    console.log(allRes, "allRes")
     const[search, setSearch] = useState("");
 
     const submitHandler = (e)=>{
         e.preventDefault();
         console.log("sub,itted")
-        const filterdata = searchFilter(search, mockData);
+        const filterdata = searchFilter(search, allRes);
         setMockData(filterdata)
     }
     const changeHandler = (e) =>{

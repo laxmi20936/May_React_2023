@@ -1,4 +1,16 @@
+import { useState } from "react"
+
 const Header =()=>{
+    const [login, setLogin]=useState(true)
+    const [dataAuth, setDataAuth]=useState("Login")
+    const loginFn = ()=>{
+      setLogin(false)
+    }
+
+    const logoutFn = ()=>{
+        setLogin(true)
+      }
+
     return(
         <div className="header">
             <div className="img-container">
@@ -8,7 +20,8 @@ const Header =()=>{
                 <ul className="nav-items">
                     <li>Home</li>
                     <li>About</li>
-                    <li>Logggin</li>
+                    {/* {login ? <li onClick={loginFn}>Login</li>: <li onClick={logoutFn}>Logout</li>} */}
+                    <li onClick={()=>dataAuth === "Login" ? setDataAuth("Logout") : setDataAuth("Login")}>{dataAuth}</li>
                     <li>Carddd</li>
                 </ul>
             </div>

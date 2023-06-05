@@ -1,11 +1,8 @@
 const RestaurantCard =(props)=>{
-    console.log(props)
+    console.log(props, "pppppx")
     let {resData} = props;
-    console.log(resData.data)
-    const {name, avgRating,costForTwo,cloudinaryImageId,cuisines,deliveryTime }= resData.data;
-    console.log(name, avgRating,costForTwo,cloudinaryImageId,cuisines,deliveryTime);
-    console.log(cuisines);
-    console.log(cuisines.join(","));
+    const {name, avgRating,costForTwo,cloudinaryImageId,cuisines,deliveryTime }= resData?.data;
+   
 
     return(
         <div className="res-card">
