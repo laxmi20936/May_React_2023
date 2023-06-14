@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header =()=>{
     const [login, setLogin]=useState(true)
@@ -18,8 +19,8 @@ const Header =()=>{
             </div>
             <div className="nav-container">
                 <ul className="nav-items">
-                    <li>Home</li>
-                    <li>About</li>
+                    <Link to="/"><li>Home</li></Link>
+                    <Link to="/about">About</Link>
                     {/* {login ? <li onClick={loginFn}>Login</li>: <li onClick={logoutFn}>Logout</li>} */}
                     <li onClick={()=>dataAuth === "Login" ? setDataAuth("Logout") : setDataAuth("Login")}>{dataAuth}</li>
                     <li>Carddd</li>

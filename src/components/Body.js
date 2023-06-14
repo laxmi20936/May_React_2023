@@ -1,5 +1,6 @@
 // import {useState} from 'react';
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
 // import cards from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
@@ -44,7 +45,7 @@ export const Body = () => {
             </div>
             <div className="allRestaurant">
                 {mockData?.length === 0 ? <div>No data found for this Restaurant</div>: 
-                mockData.map((dataObj) => <RestaurantCard key={dataObj?.data?.id} resData={dataObj}/>) }
+                mockData.map((dataObj) => <Link to ={`/restaurant/${dataObj?.data?.id}/${(dataObj?.data?.name).split(" ").join("")}`} key={dataObj?.data?.id}><RestaurantCard  resData={dataObj}/></Link>) }
                 {/* {
                     (mockData.map((dataObj) => <RestaurantCard key={dataObj.data.id} resData={dataObj}/>))
                 }                */}
